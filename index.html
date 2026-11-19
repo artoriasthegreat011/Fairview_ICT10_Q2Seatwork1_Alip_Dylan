@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- PyScript stylesheet and script to run Python in the browser -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>ICT 10</title>
+    <style>
+        body{text-align: center;}
+        h1{color: rgb(4, 50, 136);}
+        #output1{border: 5px solid rgb(17, 20, 193);box-shadow: 0px 5px 5px rgb(200, 200, 200); height: 500px;border-radius: 10px;font-size: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Candidate Verification </h1>
+    <h6>Enter only your First and last name.</h6>
+    <!-- Container for inputs, button, and result area -->
+    <div id="output1" class="container p-4 my-3">
+        <!-- Input field for First Name -->
+        <div class="mb-3 text-start">
+            <label for="first-name" class="form-label">First Name</label>
+            <input type="text" id="first-name" class="form-control" placeholder="e.g., Juan">
+        </div>
+
+        <!-- Input field for Last Name -->
+        <div class="mb-3 text-start">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input type="text" id="last-name" class="form-control" placeholder="e.g., Dela Cruz">
+        </div>
+
+        <!-- Button that triggers the Python code when clicked -->
+        <button id="check-btn" type="button" class="btn btn-primary w-100 mb-4">
+            Confirm
+        </button>
+
+        <!-- Area where the result message will appear -->
+        <div id="result-area" class="alert alert-secondary" role="alert">
+            Results appear here.
+        </div>
+    </div>
+
+    <!-- Links the external Python file -->
+    <script type="py" src="main.py"></script>
+</body>
+</html>
